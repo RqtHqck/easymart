@@ -1,9 +1,12 @@
-import { Button } from "@/shared/ui/Button";
+import { BrowserRouter } from "react-router-dom";
+import { AppRouter } from "./providers/router/ui/AppRouter";
 
 function App() {
   return (
     <>
-      <Button />
+      <BrowserRouter>
+        <AppRouter />
+      </BrowserRouter>
     </>
   );
 }
