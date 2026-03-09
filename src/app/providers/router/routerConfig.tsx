@@ -1,5 +1,5 @@
 import { HomePage, LoginPage } from "@/pages";
-import { AppRoutes, routePaths } from "@/shared/config/router";
+import { AppRoutes, routePaths } from "@/shared/config";
 import type { RouteProps } from "react-router";
 
 export const routeConfig: RouteProps[] = [
