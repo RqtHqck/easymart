@@ -1,9 +1,12 @@
-import { AppRouter } from "./providers/router/ui/AppRouter";
+import { AppRouter } from './providers/router/ui/AppRouter';
+import { Suspense } from 'react';
 
 function App() {
   return (
     <>
-      <AppRouter />
+      <Suspense fallback={<></>}>
+        <AppRouter />
+      </Suspense>
     </>
   );
 }

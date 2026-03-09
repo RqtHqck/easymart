@@ -1,12 +1,12 @@
-import { routePaths, AppRoutes } from "./router/routerPaths";
+import { routePaths, AppRoutes } from './router/routerPaths';
 import {
   Theme,
   ThemeContext,
   LOCAL_STORAGE_THEME_KEY,
   type ThemeType,
-} from "./theme/ThemeContext";
-import {useTheme} from "./theme/useTheme.ts"
-
+} from './theme/ThemeContext';
+import { useTheme } from './theme/useTheme.ts';
+import i18n from './i18n/i18n.ts';
 
 export {
   routePaths,
@@ -16,4 +16,5 @@ export {
   LOCAL_STORAGE_THEME_KEY,
   type ThemeType,
   useTheme,
+  i18n,
 };
