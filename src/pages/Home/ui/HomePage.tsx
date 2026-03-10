@@ -1,6 +1,8 @@
 import styles from './HomePage.module.scss';
 import { useTheme } from '@/shared/config';
 import { useTranslation } from 'react-i18next';
+import { Button } from '@/shared/ui';
+import EnFlagIcon from '@/shared/assets/icons/en_flag.svg?react';
 
 const HomePage = () => {
   const { toggleTheme } = useTheme();
@@ -14,8 +16,13 @@ const HomePage = () => {
     <>
       <h1 className={styles.title}>{t('hello')}</h1>
       <h2 className={styles.title}>Home</h2>
-      <button onClick={toggleTheme}>Toggle theme</button>
-      <button onClick={changeLanguage}>{i18n.language}</button>
+      <Button size="md" theme="primary" onClick={toggleTheme}>
+        Toggle theme
+      </Button>
+      <Button size="xs" theme="tertiary" onClick={changeLanguage}>
+        <EnFlagIcon />
+        {/*{i18n.language}*/}
+      </Button>
     </>
   );
 };
