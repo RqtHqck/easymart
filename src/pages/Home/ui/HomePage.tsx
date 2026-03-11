@@ -1,9 +1,8 @@
 import styles from './HomePage.module.scss';
 import { useTranslation } from 'react-i18next';
-import { Header } from '@/widgets/Header/ui/Header.tsx';
-import { Footer } from '@/widgets/Footer/ui/Footer.tsx';
 import { Link } from 'react-router-dom';
 import { routePaths } from '@/shared/config';
+import { Footer, Header } from '@/widgets';
 
 const HomePage = () => {
   const { t } = useTranslation();

@@ -26,5 +26,8 @@
     "instagram": "Instagram",
     "twitter": "Twitter",
     "copyright": "Все права защищены © {{year}} {{company}}"
+  },
+  "pageLoader": {
+    "loading": "Загрузка..."
   }
 }
