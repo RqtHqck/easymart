@@ -3,14 +3,16 @@ import { createRoot } from 'react-dom/client';
 import '@/app/styles/index.scss';
 import App from '@/app/App.tsx';
 import { BrowserRouter } from 'react-router-dom';
-import { ThemeProvider } from './app/providers';
+import { ErrorBoundary, ThemeProvider } from './app/providers';
 import '@/shared/config';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <BrowserRouter>
       <ThemeProvider>
-        <App />
+        <ErrorBoundary>
+          <App />
+        </ErrorBoundary>
       </ThemeProvider>
     </BrowserRouter>
   </StrictMode>,
