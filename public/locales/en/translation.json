@@ -34,5 +34,10 @@
     "title": "Something went wrong",
     "description": "Sorry – an unexpected error occurred. Please try refreshing the page or come back later.",
     "reload": "Try again"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "description": "Sorry, the page you are looking for doesn't exist or has been moved.",
+    "goBack": "Go back"
   }
 }

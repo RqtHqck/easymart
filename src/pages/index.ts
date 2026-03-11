@@ -1,2 +1,3 @@
-export * from "./Home";
-export * from "./Login";
+import { NotFoundPage } from './NotFound/ui/NotFoundPage';
+
+export { NotFoundPage };
