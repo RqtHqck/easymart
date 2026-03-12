@@ -6,7 +6,7 @@ import { Footer, Header } from '@/widgets';
 import { Button } from '@/shared/ui';
 import { useEffect, useState } from 'react';
 
-const HomePage = () => {
+export const HomePage = () => {
   const [error, setError] = useState<boolean>(false);
   const { t } = useTranslation();
 

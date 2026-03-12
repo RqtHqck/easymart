@@ -1,5 +1,5 @@
-import { AppRouter } from './providers/router/ui/AppRouter';
 import { Suspense } from 'react';
+import { AppRouter } from '@/app/providers';
 
 function App() {
   return (
