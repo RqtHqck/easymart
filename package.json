@@ -7,6 +7,8 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
+    "lint:ts": "tsx",
+    "lint:scss": "stylelint **/*.scss",
     "preview": "vite preview",
     "test:unit": "vitest",
     "test:regression": "npx chromatic",
