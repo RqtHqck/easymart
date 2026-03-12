@@ -1,6 +1,6 @@
 .footer {
   background-color: var(--white);
-  padding: 60ps 0 20px;
+  padding: 60px 0 20px;
 }
 
 .container {
@@ -21,7 +21,7 @@
 }
 
 .column {
-  width: 25%
+  width: 25%;
 }
 
 .columnTitle {
@@ -36,8 +36,9 @@
 
   li {
     margin-bottom: 12px;
+
     &:last-child {
-      margin-bottom: 0px;
+      margin-bottom: 0;
     }
   }
 }
@@ -56,5 +57,4 @@
   color: var(--gray-600);
   font: var(--font-s);
   margin: 32px 0;
-
 }

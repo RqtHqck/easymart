@@ -1,7 +1,8 @@
-import { supportedLngs } from '@/shared/config/i18n/i18n.ts';
 import type { FunctionComponent, SVGProps } from 'react';
+
 import EnFlagIcon from '@/shared/assets/icons/En.svg?react';
 import RuFlagIcon from '@/shared/assets/icons/Ru.svg?react';
+import { supportedLngs } from '@/shared/config/i18n/i18n.ts';
 
 export type SupportedLngsType = (typeof supportedLngs)[number];
 

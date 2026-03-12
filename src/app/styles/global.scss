@@ -1,5 +1,5 @@
 :root {
-  --font-family-main: "Roboto", sans-serif;
+  --font-family-main: 'Roboto', sans-serif;
   --font-size-xl: 32px;
   --font-line-xl: 40px;
   --font-xl: var(--font-size-xl) / var(--font-line-xl) var(--font-family-main);
@@ -44,10 +44,10 @@
   --yellow-50: #f8f8e9;
   --yellow-500: #b8bb23;
 
-   --container-padding: 80px;
+  --container-padding: 80px;
+
   // --promo-carousel-height: 248px;
   // --sidebar-width: 300px;
-
   // --modal-z-index: 1000;
   // --toast-z-index: 9999;
 }

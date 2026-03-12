@@ -4,11 +4,13 @@ import {
   type ReactNode,
   useState,
 } from 'react';
-import { cn } from '@/shared/lib';
-import styles from './Input.module.scss';
-import { Button } from '@/shared/ui';
-import ShowIcon from '@/shared/assets/icons/Show.svg?react';
+
 import HideIcon from '@/shared/assets/icons/Hide.svg?react';
+import ShowIcon from '@/shared/assets/icons/Show.svg?react';
+import { cn } from '@/shared/lib';
+import { Button } from '@/shared/ui';
+
+import styles from './Input.module.scss';
 
 type HTMLInputType = Omit<InputHTMLAttributes<HTMLInputElement>, 'onChange'>;
 

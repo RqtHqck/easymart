@@ -1,16 +1,21 @@
-import styles from './Header.module.scss';
-import LogoIcon from '@/shared/assets/icons/Logo.svg?react';
-import SearchIcon from '@/shared/assets/icons/Search.svg?react';
-import LocationIcon from '@/shared/assets/icons/Location.svg?react';
-import UserIcon from '@/shared/assets/icons/User.svg?react';
+import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
 
-import CartIcon from '@/shared/assets/icons/Cart.svg?react';
-import { AppIcon, Button, Input } from '@/shared/ui';
 import { LanguageSwitcher } from '@/widgets/Header/ui/LanguageSwitcher/LanguageSwitcher.tsx';
 import { ThemeSwitcher } from '@/widgets/Header/ui/ThemeSwitcher/ThemeSwitcher.tsx';
-import { useNavigate } from 'react-router-dom';
+
+import CartIcon from '@/shared/assets/icons/Cart.svg?react';
+import LocationIcon from '@/shared/assets/icons/Location.svg?react';
+import LogoIcon from '@/shared/assets/icons/Logo.svg?react';
+import SearchIcon from '@/shared/assets/icons/Search.svg?react';
+import UserIcon from '@/shared/assets/icons/User.svg?react';
 import { routePaths } from '@/shared/config';
-import { useTranslation } from 'react-i18next';
+import { AppIcon, Button, Input } from '@/shared/ui';
+
+
+
+import styles from './Header.module.scss';
+
 
 export const Header = () => {
   const { t } = useTranslation();

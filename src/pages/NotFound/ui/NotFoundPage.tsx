@@ -1,9 +1,11 @@
-import styles from './NotFoundPage.module.scss';
 import { useTranslation } from 'react-i18next';
-import PageNotFoundIcon from '@/shared/assets/icons/NotFound.svg?react';
-import { Button } from '@/shared/ui';
 import { useNavigate } from 'react-router-dom';
+
+import PageNotFoundIcon from '@/shared/assets/icons/NotFound.svg?react';
 import { routePaths } from '@/shared/config';
+import { Button } from '@/shared/ui';
+
+import styles from './NotFoundPage.module.scss';
 
 export const NotFoundPage = () => {
   const { t } = useTranslation();

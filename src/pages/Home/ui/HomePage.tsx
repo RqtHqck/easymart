@@ -1,10 +1,14 @@
-import styles from './HomePage.module.scss';
+import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
+
 import { routePaths } from '@/shared/config';
-import { Footer, Header } from '@/widgets';
 import { Button } from '@/shared/ui';
-import { useEffect, useState } from 'react';
+
+import styles from './HomePage.module.scss';
+
+import { Footer, Header } from '@/widgets';
+
 
 export const HomePage = () => {
   const [error, setError] = useState<boolean>(false);
