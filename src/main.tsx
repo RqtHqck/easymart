@@ -1,10 +1,22 @@
-import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
-import "@/app/styles/index.scss";
-import App from "@/app/App.tsx";
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
 
-createRoot(document.getElementById("root")!).render(
+import '@/app/styles/index.scss';
+
+import App from '@/app/App.tsx';
+
+import { ErrorBoundary, ThemeProvider } from './app/providers';
+import '@/shared/config';
+
+createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <App />
+    <BrowserRouter>
+      <ThemeProvider>
+        <ErrorBoundary>
+          <App />
+        </ErrorBoundary>
+      </ThemeProvider>
+    </BrowserRouter>
   </StrictMode>,
 );

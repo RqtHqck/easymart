@@ -1,9 +1,13 @@
-import { Button } from "@/shared/ui/Button";
+import { Suspense } from 'react';
+
+import { AppRouter } from '@/app/providers';
 
 function App() {
   return (
     <>
-      <Button />
+      <Suspense fallback={<></>}>
+        <AppRouter />
+      </Suspense>
     </>
   );
 }
