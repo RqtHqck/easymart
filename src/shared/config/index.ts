@@ -1,3 +1,4 @@
+import { AuthProviders, type AuthProvidersType } from './auth/auth.ts';
 import i18n from './i18n/i18n.ts';
 import type { SupportedLngsType } from './i18n/LngsIconList.ts';
 import { lngsIconList } from './i18n/LngsIconList.ts';
@@ -15,10 +16,12 @@ export {
   AppRoutes,
   Theme,
   ThemeContext,
-  LOCAL_STORAGE_THEME_KEY,
   type ThemeType,
   useTheme,
+  LOCAL_STORAGE_THEME_KEY,
   i18n,
-  type SupportedLngsType,
   lngsIconList,
+  type SupportedLngsType,
+  AuthProviders,
+  type AuthProvidersType,
 };

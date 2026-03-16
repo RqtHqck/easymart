@@ -6,10 +6,14 @@ import {
 
 import type { StateSchema } from '@/app/store/config/StateSchema.ts';
 
+import { userReducer } from '@/entities/user';
+
 export const createStore = (initialState?: StateSchema) => {
   return configureStore<StateSchema>({
     preloadedState: initialState,
-    reducer: {},
+    reducer: {
+      user: userReducer,
+    },
     middleware: (getDefaultMiddleware) => getDefaultMiddleware(),
     devTools: true,
   });
