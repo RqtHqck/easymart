@@ -6,17 +6,19 @@ import '@/app/styles/index.scss';
 
 import App from '@/app/App.tsx';
 
-import { ErrorBoundary, ThemeProvider } from './app/providers';
+import { ErrorBoundary, StoreProvider, ThemeProvider } from './app/providers';
 import '@/shared/config';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <BrowserRouter>
-      <ThemeProvider>
-        <ErrorBoundary>
-          <App />
-        </ErrorBoundary>
-      </ThemeProvider>
-    </BrowserRouter>
+    <StoreProvider>
+      <BrowserRouter>
+        <ThemeProvider>
+          <ErrorBoundary>
+            <App />
+          </ErrorBoundary>
+        </ThemeProvider>
+      </BrowserRouter>
+    </StoreProvider>
   </StrictMode>,
 );
