@@ -3,12 +3,11 @@ import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 
 import { routePaths } from '@/shared/config';
-import { Button } from '@/shared/ui';
+import { Button, Tabs } from '@/shared/ui';
 
 import styles from './HomePage.module.scss';
 
 import { Footer, Header } from '@/widgets';
-
 
 export const HomePage = () => {
   const [error, setError] = useState<boolean>(false);
@@ -31,6 +30,15 @@ export const HomePage = () => {
         <h1 className={styles.title}>{t('hello')}</h1>
         <Link to={routePaths.login}>Login page</Link>
         <Button onClick={handleErrorButtonClick}>Click</Button>
+        <Tabs defaultValue="email">
+          <Tabs.List>
+            <Tabs.Trigger value="email">Email</Tabs.Trigger>
+            <Tabs.Trigger value="phone">Phone</Tabs.Trigger>
+          </Tabs.List>
+
+          <Tabs.Content value="email">Email form content</Tabs.Content>
+          <Tabs.Content value="phone">Phone form content</Tabs.Content>
+        </Tabs>
       </main>
       <Footer />
     </div>
