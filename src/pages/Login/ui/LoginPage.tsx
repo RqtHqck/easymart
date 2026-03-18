@@ -1,16 +1,19 @@
-import { useTranslation } from 'react-i18next';
-import { Link } from 'react-router-dom';
+// import { useTranslation } from 'react-i18next';
+
+import { LoginForm } from '@/features/login';
+
+import styles from './LoginPage.module.scss';
 
 export const LoginPage = () => {
-  const { t } = useTranslation('login');
+  // const { t } = useTranslation('login');
+
   return (
-    <>
-      <h1>Login</h1>
-      <h2>
-        <Link to={'/'}>Home Page</Link>
-      </h2>
-      <h3>{t('login')}</h3>
-    </>
+    <div className={styles.wrapper}>
+      <div className={styles.main}>
+        <h1 className={styles.title}>Login</h1>
+        <LoginForm />
+      </div>
+    </div>
   );
 };
 

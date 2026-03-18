@@ -57,13 +57,6 @@
   }
 }
 
-.ghost {
-  background-color: transparent;
-  border: none;
-  padding: 0;
-  font-weight: 500;
-}
-
 .disabled {
   color: var(--gray-400);
   background-color: var(--gray-100);
@@ -82,7 +75,6 @@
   border-radius: 100%;
   aspect-ratio: 1;
 }
-
 
 .xs {
   padding: 8px 16px;
@@ -140,3 +132,13 @@
   }
 }
 
+.ghost {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  font-weight: 500;
+}
+
+.fullWidth {
+  width: 100%;
+}

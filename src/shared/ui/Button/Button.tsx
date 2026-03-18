@@ -15,6 +15,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   form?: ButtonFrom;
   theme?: ButtonTheme;
   disabled?: boolean;
+  fullWidth?: boolean;
 }
 
 export const Button = (props: ButtonProps) => {
@@ -25,6 +26,7 @@ export const Button = (props: ButtonProps) => {
     theme = 'primary',
     form = 'pill',
     disabled = false,
+    fullWidth = false,
     ...rest
   } = props;
   return (
@@ -37,7 +39,7 @@ export const Button = (props: ButtonProps) => {
         styles[size],
         styles[form],
         styles[theme],
-        { [styles.disabled]: disabled },
+        { [styles.disabled]: disabled, [styles.fullWidth]: fullWidth },
       )}
     >
       {children}

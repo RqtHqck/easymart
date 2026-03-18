@@ -1,0 +1,42 @@
+.wrapper {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.title {
+  font: var(--font-xl);
+  font-weight: 600;
+}
+
+//.divider {
+//  width: 100%;
+//  margin: 20px 0;
+//}
+//
+//.line {
+//  flex: 1;
+//  height: 1px;
+//  background-color: var(--gray-100);
+//}
+
+//.dividerText {
+//  padding: 0 4px;
+//  white-space: nowrap;
+//  background-color: inherit;
+//}
+//
+//.footer {
+//  text-align: center;
+//}
+//
+//.link {
+//  text-decoration: none;
+//}
