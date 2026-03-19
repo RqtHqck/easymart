@@ -1,3 +1,5 @@
+import { API_URL } from '@/shared/config/api/api.ts';
+
 import {
   AuthMethods,
   type AuthMethodsType,
@@ -33,4 +35,5 @@ export {
   AuthMethods,
   type AuthMethodsType,
   LOCAL_STORAGE_USER_KEY,
+  API_URL,
 };
