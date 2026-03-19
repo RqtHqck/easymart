@@ -8,6 +8,7 @@ import { selectLoginIsLoadingSelector } from '@/features/login/model/selectors/s
 import { selectLoginMethodSelector } from '@/features/login/model/selectors/selectLoginMethod/selectLoginMethod.ts';
 import { selectLoginPasswordSelector } from '@/features/login/model/selectors/selectLoginPassword/selectLoginPassword.ts';
 import { selectLoginPhoneSelector } from '@/features/login/model/selectors/selectLoginPhone/selectLoginPhone.ts';
+import 'react-international-phone/style.css';
 
 import { login } from '@/entities/user/model/services/login.ts';
 
@@ -16,7 +17,7 @@ import Call from '@/shared/assets/icons/Call.svg?react';
 import Sms from '@/shared/assets/icons/Sms.svg?react';
 import { AuthMethods, routePaths } from '@/shared/config';
 import { useAppDispatch, useAppSelector } from '@/shared/lib';
-import { AppIcon, Button, Input, Tabs } from '@/shared/ui';
+import { AppIcon, Button, Input, PhoneInput, Tabs } from '@/shared/ui';
 
 import styles from './LoginForm.module.scss';
 
@@ -84,7 +85,7 @@ export const LoginForm = () => {
           />
         </Tabs.Content>
         <Tabs.Content value={AuthMethods.PHONE}>
-          <Input
+          <PhoneInput
             error={!!error}
             value={phone}
             label={'Phone'}

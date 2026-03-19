@@ -2,6 +2,7 @@ import {
   type ChangeEvent,
   type InputHTMLAttributes,
   type ReactNode,
+  type Ref,
   useState,
 } from 'react';
 
@@ -14,7 +15,7 @@ import styles from './Input.module.scss';
 
 type HTMLInputType = Omit<InputHTMLAttributes<HTMLInputElement>, 'onChange'>;
 
-interface InputProps extends HTMLInputType {
+export interface InputProps extends HTMLInputType {
   className?: string;
   Icon?: ReactNode;
   value?: string;
@@ -24,6 +25,7 @@ interface InputProps extends HTMLInputType {
   label?: string;
   onChange?: (value: string) => void;
   error?: boolean;
+  ref?: Ref<HTMLInputElement>;
 }
 
 export const Input = (props: InputProps) => {
@@ -40,6 +42,7 @@ export const Input = (props: InputProps) => {
     rounded = false,
     type = 'text',
     error = false,
+    ref,
     ...rest
   } = props;
 
@@ -72,6 +75,7 @@ export const Input = (props: InputProps) => {
 
         <input
           {...rest}
+          ref={ref}
           value={value}
           disabled={disabled}
           onChange={handleChange}

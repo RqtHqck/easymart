@@ -2,12 +2,11 @@ import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 
-import '@/app/styles/index.scss';
-
 import App from '@/app/App.tsx';
 
 import { ErrorBoundary, StoreProvider, ThemeProvider } from './app/providers';
-import '@/shared/config';
+import '@/app/styles/index.scss';
+import '@/shared/config/i18n/i18n';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
