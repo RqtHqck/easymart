@@ -36,6 +36,7 @@ export const loginSlice = createSlice({
       state.email = '';
       state.password = '';
       state.phone = '';
+      state.error = '';
     },
   },
   extraReducers: (builder) => {

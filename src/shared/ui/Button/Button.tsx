@@ -1,6 +1,7 @@
 import type { ButtonHTMLAttributes, ReactNode } from 'react';
 
 import { cn } from '@/shared/lib';
+import { Spinner } from '@/shared/ui';
 
 import styles from './Button.module.scss';
 
@@ -16,6 +17,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   theme?: ButtonTheme;
   disabled?: boolean;
   fullWidth?: boolean;
+  isLoading?: boolean;
 }
 
 export const Button = (props: ButtonProps) => {
@@ -27,6 +29,7 @@ export const Button = (props: ButtonProps) => {
     form = 'pill',
     disabled = false,
     fullWidth = false,
+    isLoading = false,
     ...rest
   } = props;
   return (
@@ -39,9 +42,14 @@ export const Button = (props: ButtonProps) => {
         styles[size],
         styles[form],
         styles[theme],
-        { [styles.disabled]: disabled, [styles.fullWidth]: fullWidth },
+        {
+          [styles.disabled]: disabled,
+          [styles.fullWidth]: fullWidth,
+          [styles.isLoading]: isLoading,
+        },
       )}
     >
+      {isLoading && <Spinner size={'sm'} theme={'secondary'} />}
       {children}
     </button>
   );
