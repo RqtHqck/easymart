@@ -1,3 +1,3 @@
-import { httpClient } from '@/shared/api/axios/httpClient.ts';
+import {httpClient, setAuthFailureHandler} from '@/shared/api/axios/httpClient.ts';
 
-export { httpClient };
+export { httpClient, setAuthFailureHandler };

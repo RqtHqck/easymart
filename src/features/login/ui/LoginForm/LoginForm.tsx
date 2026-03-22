@@ -10,7 +10,7 @@ import { selectLoginPasswordSelector } from '@/features/login/model/selectors/se
 import { selectLoginPhoneSelector } from '@/features/login/model/selectors/selectLoginPhone/selectLoginPhone.ts';
 import 'react-international-phone/style.css';
 
-import { login } from '@/entities/user/model/services/login.ts';
+import { login } from '@/features/login/model/services/login.ts';
 
 import ArrowRight from '@/shared/assets/icons/ArrowRight.svg?react';
 import Call from '@/shared/assets/icons/Call.svg?react';
@@ -105,7 +105,7 @@ export const LoginForm = () => {
       />
       {error && <div className={styles.error}>{error}</div>}
       <Button
-        type="button"
+        type="submit"
         className={styles.button}
         size="md"
         isLoading={isLoading}

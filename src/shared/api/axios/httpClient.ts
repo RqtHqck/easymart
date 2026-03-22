@@ -119,7 +119,7 @@ httpClient.interceptors.response.use(
         try {
           localStorage.removeItem(LOCAL_STORAGE_USER_KEY);
         } catch (storageError) {
-          logError('storage clear erro', storageError);
+          logError('storage clear error', storageError);
         }
 
         if (authFailureHandler) {

@@ -1,3 +1,4 @@
+import {refreshSession} from "@/entities/user/model/services/refreshSession.ts";
 import {
   userActions,
   userReducer,
@@ -7,5 +8,5 @@ import type {
   UserSchema,
 } from '@/entities/user/model/types/UserSchema.ts';
 
-export { userReducer, userActions };
+export { userReducer, userActions, refreshSession };
 export type { User, UserSchema };

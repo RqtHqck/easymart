@@ -1,3 +1,4 @@
+import {login} from "@/features/login/model/services/login.ts";
 import {
   loginActions,
   loginSlice,
@@ -6,4 +7,5 @@ import type { LoginFormSchema } from '@/features/login/model/types/LoginFormSche
 import { LoginForm } from '@/features/login/ui/LoginForm/LoginForm.tsx';
 
 export type { LoginFormSchema };
-export { loginActions, loginSlice, LoginForm };
+
+export { loginActions, loginSlice, LoginForm, login };
