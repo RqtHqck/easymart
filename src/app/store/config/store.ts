@@ -7,6 +7,7 @@ import {
 import type { StateSchema } from '@/app/store/config/StateSchema.ts';
 
 import { loginReducer } from '@/features/login/model/slice/loginSlice.ts';
+import { registerReducer } from '@/features/register';
 
 import { userReducer } from '@/entities/user';
 
@@ -16,6 +17,7 @@ export const createStore = (initialState?: StateSchema) => {
     reducer: {
       user: userReducer,
       loginForm: loginReducer,
+      registerForm: registerReducer,
     },
     middleware: (getDefaultMiddleware) => getDefaultMiddleware(),
     devTools: true,
