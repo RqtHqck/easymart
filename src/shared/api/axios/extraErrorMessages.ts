@@ -1,12 +1,6 @@
 import type { AxiosError } from 'axios';
 import i18n from 'i18next';
 
-interface ApiAErrorData {
-  code: string;
-  message?: string;
-  detail?: string;
-}
-
 const isAxiosError = (error: unknown): error is AxiosError => {
   return (
     typeof error === 'object' &&
@@ -15,6 +9,12 @@ const isAxiosError = (error: unknown): error is AxiosError => {
     error.isAxiosError === true
   );
 };
+
+interface ApiAErrorData {
+  code: string;
+  message?: string;
+  detail?: string;
+}
 
 const isApiErrorData = (data: unknown): data is ApiAErrorData => {
   return (

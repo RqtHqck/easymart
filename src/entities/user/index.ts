@@ -1,4 +1,5 @@
-import {refreshSession} from "@/entities/user/model/services/refreshSession.ts";
+import { applyUserSession } from '@/entities/user/model/services/applyUserSession/applyUserSession.ts';
+import { refreshSession } from '@/entities/user/model/services/refreshSession/refreshSession.ts';
 import {
   userActions,
   userReducer,
@@ -8,5 +9,5 @@ import type {
   UserSchema,
 } from '@/entities/user/model/types/UserSchema.ts';
 
-export { userReducer, userActions, refreshSession };
+export { userReducer, userActions, refreshSession, applyUserSession };
 export type { User, UserSchema };
