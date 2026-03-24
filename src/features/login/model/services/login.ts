@@ -1,9 +1,8 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
-import { userActions } from '@/entities/user';
+import { applyUserSession } from '@/entities/user';
 
 import { extractErrorMessage, httpClient } from '@/shared/api';
-import { LOCAL_STORAGE_USER_KEY } from '@/shared/config';
 
 type LoginArgs = {
   email?: string;
@@ -13,7 +12,7 @@ type LoginArgs = {
 
 export const login = createAsyncThunk<void, LoginArgs, { rejectValue: string }>(
   'features/login',
-  async (authData, thunkApi) => {
+  async (authData, thunkAPI) => {
     try {
       const response = await httpClient.post(
         'http://localhost:3000/auth/login',
@@ -21,11 +20,10 @@ export const login = createAsyncThunk<void, LoginArgs, { rejectValue: string }>(
       );
       const userData = response.data;
 
-      localStorage.setItem(LOCAL_STORAGE_USER_KEY, JSON.stringify(userData));
-      thunkApi.dispatch(userActions.setUserData(userData));
+      applyUserSession(userData, thunkAPI.dispatch);
       return;
     } catch (error) {
-      return thunkApi.rejectWithValue(extractErrorMessage(error));
+      return thunkAPI.rejectWithValue(extractErrorMessage(error));
     }
   },
 );

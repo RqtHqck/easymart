@@ -3,6 +3,8 @@ import type { PayloadAction } from '@reduxjs/toolkit';
 
 import type { LoginFormSchema } from '@/features/login/model/types/LoginFormSchema.ts';
 import { register } from '@/features/register/model/services/register.ts';
+import { resendCode } from '@/features/register/model/services/resendCode.ts';
+import { verifyCode } from '@/features/register/model/services/verifyCode.ts';
 import {
   FormSteps,
   type FormStepsType,
@@ -56,6 +58,26 @@ export const registerSlice = createSlice({
         state.isLoading = false;
       })
       .addCase(register.rejected, (state, action) => {
+        state.isLoading = false;
+        state.error = action.payload;
+      })
+      .addCase(resendCode.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(resendCode.fulfilled, (state) => {
+        state.isLoading = false;
+      })
+      .addCase(resendCode.rejected, (state, action) => {
+        state.isLoading = false;
+        state.error = action.payload;
+      })
+      .addCase(verifyCode.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(verifyCode.fulfilled, (state) => {
+        state.isLoading = false;
+      })
+      .addCase(verifyCode.rejected, (state, action) => {
         state.isLoading = false;
         state.error = action.payload;
       });
